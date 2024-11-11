@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event & Program Offerings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="header-container">
+       
+        <div class="logo">
+            <img src="../static/images/VoluntarioIcon.png" alt="Voluntario Logo" />
+            <span>VOLUNTARIO</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="/" class="text-white text-decoration-none">HOME</a>
+                <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
+                <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
+                <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
+        </nav>
+
+        <!-- Sign In and Sign Up Buttons -->
+        <div class="auth-buttons">
+            <a href="/LogIn" class="text-decoration-none"><button class="btn btn-light me-2">Sign In</button></a>
+            <a href="/SignUp" class="text-decoration-none"><button class="btn btn-outline-light">Sign Up</button></a>
+        </div>
+    </div>
+</header>
+
+<body>
+<div class="container my-4">
+    <h1 class="text-center">Explore Our Events & Programs</h1>
+    <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search for an event...">
+
+    <div class="row" id="eventCards">
+
+        <!-- Health Category -->
+        <h2 class="text-center mt-4">Health</h2>
+        <div class="col-md-4 mb-4 card-item" data-category="Health">
+            <div class="card">
+                <img src="../static/images/blood-donation.jpg" class="card-img-top" alt="Blood Donation">
+                <div class="card-body">
+                    <h5 class="card-title">Blood Donation Drive</h5>
+                    <p class="card-text">Help save lives by donating blood.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#bloodDonationModal">View Details</button>
+                        <button type="button" class="btn btn-success mt-2">Apply</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 card-item" data-category="Health">
+            <div class="card">
+                <img src="../static/images/vaccination.jpg" class="card-img-top" alt="Vaccination Clinic">
+                <div class="card-body">
+                    <h5 class="card-title">Vaccination Clinic</h5>
+                    <p class="card-text">Get vaccinated and stay protected against illnesses.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#vaccinationClinicModal">View Details</button>
+                        <button type="button" class="btn btn-success mt-2">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animal Welfare Category -->
+        <h2 class="text-center mt-4">Animal Welfare</h2>
+        <div class="col-md-4 mb-4 card-item" data-category="Animal Welfare">
+            <div class="card">
+                <img src="../static/images/pet-adoption.jpg" class="card-img-top" alt="Pet Adoption">
+                <div class="card-body">
+                    <h5 class="card-title">Pet Adoption Program</h5>
+                    <p class="card-text">Find a loving home for rescued animals.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#petAdoptionModal">View Details</button>
+                        <button type="button" class="btn btn-success mt-2">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Environment Category -->
+        <h2 class="text-center mt-4">Environment</h2>
+        <div class="col-md-4 mb-4 card-item" data-category="Environment">
+            <div class="card">
+                <img src="../static/images/tree-planting.jpg" class="card-img-top" alt="Tree Planting">
+                <div class="card-body">
+                    <h5 class="card-title">Tree Planting Initiative</h5>
+                    <p class="card-text">Join us to fight climate change.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#treePlantingModal">View Details</button>
+                        <button type="button" class="btn btn-success mt-2">Apply</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 card-item" data-category="Environment">
+            <div class="card">
+                <img src="../static/images/clean-up.jpg" class="card-img-top" alt="Clean-Up Drive">
+                <div class="card-body">
+                    <h5 class="card-title">Community Clean-Up Drive</h5>
+                    <p class="card-text">Help clean up our local parks and public spaces.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#cleanupDriveModal">View Details</button>
+                        <button type="button" class="btn btn-success mt-2">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Support Category -->
+        <h2 class="text-center mt-4">Community Support</h2>
+        <div class="col-md-4 mb-4 card-item" data-category="Community Support">
+            <div class="card">
+                <img src="../static/images/feeding-program.jpg" class="card-img-top" alt="Feeding Program">
+                <div class="card-body">
+                    <h5 class="card-title">Feeding Program</h5>
+                    <p class="card-text">Provide meals to those in need in our community.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#feedingProgramModal">View Details</button>
+                        <button type="button" class="btn btn-success mt-2">Apply</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 card-item" data-category="Community Support">
+            <div class="card">
+                <img src="../static/images/elder-care.jpg" class="card-img-top" alt="Elder Care Support">
+                <div class="card-body">
+                    <h5 class="card-title">Elder Care Support</h5>
+                    <p class="card-text">Support and companionship for the elderly in our community.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#elderCareModal">View Details</button>
+                        <button type="button" class="btn btn-success mt-2">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modals -->
+    <!-- Blood Donation Modal -->
+    <div class="modal fade" id="bloodDonationModal" tabindex="-1" aria-labelledby="bloodDonationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-wide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bloodDonationModalLabel">Blood Donation Drive</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <main class="flex-grow-1">
+
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- Event Image and Description Section -->
+                                <div class="col-md-8">
+                                    <img src="../static/images/blood-donation.jpg" alt="Event Image" class="img-fluid rounded mb-4">
+                                    <div class="event-description">
+                                        <h4>About this Event</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Event Details Section -->
+                                <div class="col-md-4">
+                                    <div class="event-details p-4 rounded shadow">
+                                        <p><strong>Virtual</strong></p>
+                                        <p><strong>Date:</strong> Nov 12, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
+                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Contact:</strong></p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: </li>
+                                            <li><i class="bi bi-envelope"></i> Email Address: </li>
+                                        </ul>
+                        
+                                        <!-- Volunteer Button -->
+                                        <button class="btn btn-primary w-100 mt-3">Volunteer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pet Adoption Modal -->
+    <div class="modal fade" id="petAdoptionModal" tabindex="-1" aria-labelledby="petAdoptionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-wide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="petAdoptionModalLabel">Pet Adoption Program</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <main class="flex-grow-1">
+
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- Event Image and Description Section -->
+                                <div class="col-md-8">
+                                    <img src="../static/images/pet-adoption.jpg" alt="Event Image" class="img-fluid rounded mb-4">
+                                    <div class="event-description">
+                                        <h4>About this Event</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Event Details Section -->
+                                <div class="col-md-4">
+                                    <div class="event-details p-4 rounded shadow">
+                                        <p><strong>Virtual</strong></p>
+                                        <p><strong>Date:</strong> Nov 12, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
+                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Contact:</strong></p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                        </ul>
+                        
+                                        <!-- Volunteer Button -->
+                                        <button class="btn btn-primary w-100 mt-3">Volunteer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tree Planting Modal -->
+    <div class="modal fade" id="treePlantingModal" tabindex="-1" aria-labelledby="treePlantingModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-wide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="treePlantingModalLabel">Tree Planting Initiative</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <main class="flex-grow-1">
+
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- Event Image and Description Section -->
+                                <div class="col-md-8">
+                                    <img src="../static/images/tree-planting.jpg" alt="Event Image" class="img-fluid rounded mb-4">
+                                    <div class="event-description">
+                                        <h4>About this Event</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Event Details Section -->
+                                <div class="col-md-4">
+                                    <div class="event-details p-4 rounded shadow">
+                                        <p><strong>Virtual</strong></p>
+                                        <p><strong>Date:</strong> Nov 12, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
+                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Contact:</strong></p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                        </ul>
+                        
+                                        <!-- Volunteer Button -->
+                                        <button class="btn btn-primary w-100 mt-3">Volunteer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clean-Up Drive Modal -->
+    <div class="modal fade" id="cleanupDriveModal" tabindex="-1" aria-labelledby="cleanupDriveModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-wide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cleanupDriveModalLabel">Community Clean-Up Drive</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <main class="flex-grow-1">
+
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- Event Image and Description Section -->
+                                <div class="col-md-8">
+                                    <img src="../static/images/clean-up.jpg" alt="Event Image" class="img-fluid rounded mb-4">
+                                    <div class="event-description">
+                                        <h4>About this Event</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Event Details Section -->
+                                <div class="col-md-4">
+                                    <div class="event-details p-4 rounded shadow">
+                                        <p><strong>Virtual</strong></p>
+                                        <p><strong>Date:</strong> Nov 12, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
+                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Contact:</strong></p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                        </ul>
+                        
+                                        <!-- Volunteer Button -->
+                                        <button class="btn btn-primary w-100 mt-3">Volunteer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feeding Program Modal -->
+    <div class="modal fade" id="feedingProgramModal" tabindex="-1" aria-labelledby="feedingProgramModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-wide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedingProgramModalLabel">Feeding Program</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <main class="flex-grow-1">
+
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- Event Image and Description Section -->
+                                <div class="col-md-8">
+                                    <img src="../static/images/feeding-program.jpg" alt="Event Image" class="img-fluid rounded mb-4">
+                                    <div class="event-description">
+                                        <h4>About this Event</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Event Details Section -->
+                                <div class="col-md-4">
+                                    <div class="event-details p-4 rounded shadow">
+                                        <p><strong>Virtual</strong></p>
+                                        <p><strong>Date:</strong> Nov 12, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
+                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Contact:</strong></p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                        </ul>
+                        
+                                        <!-- Volunteer Button -->
+                                        <button class="btn btn-primary w-100 mt-3">Volunteer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elder Care Support Modal -->
+    <div class="modal fade" id="elderCareModal" tabindex="-1" aria-labelledby="elderCareModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-wide">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="elderCareModalLabel">Elder Care Support</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <main class="flex-grow-1">
+
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- Event Image and Description Section -->
+                                <div class="col-md-8">
+                                    <img src="../static/images/elder-care.jpg" alt="Event Image" class="img-fluid rounded mb-4">
+                                    <div class="event-description">
+                                        <h4>About this Event</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Event Details Section -->
+                                <div class="col-md-4">
+                                    <div class="event-details p-4 rounded shadow">
+                                        <p><strong>Virtual</strong></p>
+                                        <p><strong>Date:</strong> Nov 12, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
+                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Contact:</strong></p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                        </ul>
+                        
+                                        <!-- Volunteer Button -->
+                                        <button class="btn btn-primary w-100 mt-3">Volunteer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vaccination Clinic Modal -->
+    <div class="modal fade" id="vaccinationClinicModal" tabindex="-1" aria-labelledby="vaccinationClinicModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-wide">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vaccinationClinicModalLabel">Vaccination Clinic</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <main class="flex-grow-1">
+
+                        <div class="container py-5">
+                            <div class="row">
+                                <!-- Event Image and Description Section -->
+                                <div class="col-md-8">
+                                    <img src="../static/images/vaccination.jpg" alt="Event Image" class="img-fluid rounded mb-4">
+                                    <div class="event-description">
+                                        <h4>About this Event</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Event Details Section -->
+                                <div class="col-md-4">
+                                    <div class="event-details p-4 rounded shadow">
+                                        <p><strong>Virtual</strong></p>
+                                        <p><strong>Date:</strong> Nov 12, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
+                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Contact:</strong></p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                        </ul>
+                        
+                                        <!-- Volunteer Button -->
+                                        <button class="btn btn-primary w-100 mt-3">Volunteer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                      
+
+
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Chatbot Toggle Button -->
+   <button id="toggle-chatbot" class="toggle-chatbot-btn">
+    <i class="bi bi-chat-dots-fill"></i> Chat
+</button>
+
+<!-- Chatbot Interface -->
+<div class="pokedex-container" id="chatbot">
+    <div class="chat-header">
+        <h1 class="chat-title">Voluntario</h1>
+        <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>
+    </div>
+    <div class="chat-container" id="chat-window">
+        <div id="chat-box" class="chat-box">
+            <!-- Messages will be added here dynamically -->
+        </div>
+    </div>
+    <form id="chat-form" aria-label="Chat with Voluntario Bot">
+        <input type="text" id="question" name="question" placeholder="Ask me anything..." required aria-label="Type your message here">
+        <button type="submit" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+    </form>
+</div>
+    
+    <!-- Footer Section -->
+    <footer style="background: linear-gradient(rgba(43, 49, 61, 0.8), rgba(43, 49, 61, 0.8)), 
+                    url('../static/images/footer.jpg') no-repeat center center / cover;
+        color: #fff;
+        padding: 40px 0;
+        font-family: Arial, sans-serif;">
+        <div
+            style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: start;">
+    
+            <!-- Get in Touch Section -->
+            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+                <h3>Get in Touch</h3>
+                <form action="#" method="post" style="display: flex; flex-direction: column;">
+                    <label for="name" style="margin-bottom: 5px;">Name</label>
+                    <input type="text" id="name" name="name"
+                        style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
+    
+                    <label for="email" style="margin-bottom: 5px;">Email</label>
+                    <input type="email" id="email" name="email"
+                        style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
+    
+                    <label for="message" style="margin-bottom: 5px;">Message</label>
+                    <textarea id="message" name="message" rows="4"
+                        style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;"></textarea>
+    
+                    <button type="submit"
+                        style="padding: 10px 20px; background-color: #f7b42c; color: #333; border: none; border-radius: 5px; cursor: pointer;">
+                        Submit
+                    </button>
+                </form>
+            </div>
+    
+            <!-- Right Side: Contact Information, About Us, and Social Links -->
+            <div style="flex: 1; min-width: 250px; margin-bottom: 20px; margin-left: 40px;">
+                <!-- Contact Information -->
+                <h3>Contact Information</h3>
+                <p>Email: support@voluntario.com</p>
+                <p>Phone: +123 456 7890</p>
+    
+                <!-- About Us -->
+                <h3>About Us</h3>
+                <p>Connecting volunteers with meaningful opportunities to make an impact. Our platform bridges passionate
+                    individuals with
+                    organizations in need, empowering volunteers to contribute their skills and time toward causes they care
+                    about. Join us to
+                    make a difference, one action at a time, and be part of a community dedicated to positive change
+                    and lasting impact.</p>
+    
+                <!-- Follow Us Links -->
+                <h3>Follow Us</h3>
+                <div style="display: flex; gap: 10px;">
+                    <a href="https://facebook.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.card-item');
+
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                card.style.display = title.includes(searchValue) ? 'block' : 'none';
+            });
+        });
+        // Function to convert **text** to <strong>text</strong>
+        function formatBoldText(text) {
+            return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+        }
+    
+        document.getElementById("chat-form").onsubmit = async function(event) {
+            event.preventDefault();
+            const question = document.getElementById("question").value;
+            const chatBox = document.getElementById("chat-box");
+    
+            // Display user question in chat
+            const userMessage = document.createElement("div");
+            userMessage.className = "user";
+            userMessage.innerHTML = `<span>${question}</span>`;
+            chatBox.appendChild(userMessage);
+            document.getElementById("question").value = "";  // Clear input
+    
+            // Fetch response from the server
+            try {
+                const response = await fetch("/ask", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: new URLSearchParams({ question }),
+                });
+                if (!response.ok) throw new Error("Network response was not ok");
+                const data = await response.json();
+    
+                // Format the response to include bold text
+                const formattedResponse = formatBoldText(data.response);
+    
+                // Display chatbot response in chat with formatted bold text
+
+                const botMessageWrapper = document.createElement("div");
+                botMessageWrapper.className = "bot-wrapper";
+
+                const botMessage = document.createElement("div");
+                botMessage.className = "bot";
+                botMessage.innerHTML = `<span>${formattedResponse}</span>`;
+                
+                botMessageWrapper.appendChild(botMessage);
+                chatBox.appendChild(botMessageWrapper);
+            }   
+        
+            catch (error) {
+                console.error("Fetch error:", error);
+                const errorMessage = document.createElement("div");
+                errorMessage.className = "message bot";
+                errorMessage.innerHTML = `<span>Sorry, something went wrong. Please try again later.</span>`;
+                chatBox.appendChild(errorMessage);
+            }
+    
+            chatBox.scrollTop = chatBox.scrollHeight;  // Auto-scroll to latest message
+        };
+    
+        document.getElementById("toggle-chatbot").addEventListener("click", function() {
+const chatbot = document.getElementById("chatbot");
+const toggleButton = document.getElementById("toggle-chatbot");
+
+if (chatbot.style.display === "none" || chatbot.style.display === "") {
+    chatbot.style.display = "flex"; // Show the chatbot
+    toggleButton.style.display = "none"; // Hide toggle button
+} else {
+    chatbot.style.display = "none"; // Hide the chatbot
+    toggleButton.style.display = "block"; // Show toggle button
+}
+});
+
+document.getElementById("close-chatbot").addEventListener("click", function() {
+document.getElementById("chatbot").style.display = "none"; // Hide chatbot
+document.getElementById("toggle-chatbot").style.display = "block"; // Show toggle button
+});
+
+
+    </script>
+
+
+</body>
+
+
+</html>

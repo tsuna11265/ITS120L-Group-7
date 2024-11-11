@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Banner</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+
+   
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/scripts.js"></script>
+</head>
+
+
+
+<header class="header">
+    <div class="header-container">
+       
+        <div class="logo">
+            <img src="../static/images/VoluntarioIcon.png" alt="Voluntario Logo" />
+            <span>VOLUNTARIO</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="/" class="text-white text-decoration-none">HOME</a>
+                <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
+                <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
+                <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
+        </nav>
+
+        <!-- Sign In and Sign Up Buttons -->
+        <div class="auth-buttons">
+            <a href="/LogIn" class="text-decoration-none"><button class="btn btn-light me-2">Sign In</button></a>
+            <a href="/SignUp" class="text-decoration-none"><button class="btn btn-outline-light">Sign Up</button></a>
+        </div>
+    </div>
+</header>
+
+
+
+<body>
+    <!-- BANNER SECTION -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <div class="banner-overlay">
+                    <img src="../static/images/banner-1.jpg" class="d-block w-100 banner-image"
+                        alt="Be the first heart of change">
+                    <div class="carousel-caption d-flex flex-column align-items-start">
+                        <h2 class="main-heading">Be the first heart of change</h2>
+                        <p class="small-heading">Volunteers don't just give their time, they give a piece of heart</p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a href="GetStarted.html" class="btn btn-primary" type="button">Start Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <div class="banner-overlay">
+                    <img src="../static/images/banner-2.jpg" class="d-block w-100 banner-image"
+                        alt="Volunteer today, volunteer tomorrow">
+                    <div class="carousel-caption d-flex flex-column align-items-start">
+                        <h2 class="main-heading">Volunteer today, volunteer tomorrow</h2>
+                        <p class="small-heading">Together, let's create a brighter future.</p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a href="LearnMore.html" class="btn btn-primary" type="button">Learn More</a>
+                            <a href="SignUp.html" class="btn btn-secondary" type="button">Join Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Slide -->
+            <div class="carousel-item">
+                <div class="banner-overlay">
+                    <img src="../static/images/banner-3.jpg" class="d-block w-100 banner-image"
+                        alt="Connecting hearts, Creating impact">
+                    <div class="carousel-caption d-flex flex-column align-items-start">
+                        <h2 class="main-heading">Connecting hearts, Creating impact</h2>
+                        <p class="small-heading">Be part of a community where every effort counts.</p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a href="Events.html" class="btn btn-primary" type="button">View Events</a>
+                            <a href="Contact.html" class="btn btn-secondary" type="button">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!--ABOUT US-->
+
+        <section class="about-us">
+            <div class="about-content">
+                <img src="../static/images/about-us.png" alt="About Us Image" class="about-image">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Welcome to Voluntario! We’re on a mission to connect passionate individuals with meaningful volunteer opportunities that
+                    make a real difference in your local community or explore ways to impact lives
+                    worldwide, Voluntario is here to make finding the right fit easy and fulfilling.
+        
+                        <br>
+                        <br>
+                    Our platform connects you with nonprofits, charities, and community organizations seeking volunteers. Simply create a
+                    profile, select causes you're passionate about, and we’ll recommend roles that suit your skills and goals. 
+        
+                        <br>
+                        <br>
+                        We invite you to explore our selection and discover the programs you wanted to be part of. At Voluntario, every
+                        piece of dedication, commitment, and effort you give can create a lasting impact.
+                        
+           
+                    </p>
+                    <a href="#" class="read-more">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+
+<!--GALLERY-->
+
+<section class="gallery container">
+    <div class="row">
+        <div class="col-md-4 gallery-item">
+            <img src="../static/images/gallery-1.jpg" alt="Gallery Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-4 gallery-item">
+            <img src="../static/images/gallery-2.jpg" alt="Gallery Image 2" class="img-fluid">
+        </div>
+        <div class="col-md-4 gallery-item">
+            <img src="../static/images/gallery-3.jpg" alt="Gallery Image 3" class="img-fluid">
+        </div>
+        <div class="col-md-4 gallery-item">
+            <img src="../static/images/gallery-4.jpg" alt="Gallery Image 1" class="img-fluid">
+        </div>
+        <div class="col-md-4 gallery-item">
+            <img src="../static/images/gallery-5.jpg" alt="Gallery Image 2" class="img-fluid">
+        </div>
+        <div class="col-md-4 gallery-item">
+            <img src="../static/images/gallery6.jpg" alt="Gallery Image 3" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+    <main class="flex-grow-1">
+        <div class="container-fluid p-0">
+            <!-- Full-width Image Section -->
+            <div class="full-width-image-placeholder"></div>
+        </div>
+
+
+        <!-- Why Choose Us Section -->
+
+<div class="container py-5">
+    <h3 class="text-center mb-4">Why Choose Us</h3>
+    <div class="row text-center">
+        <!-- Diverse Opportunities -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 border-0 shadow">
+                <div class="card-body">
+                    <i class="bi bi-globe2 display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Diverse Opportunities</h5>
+                    <p class="card-text">Explore a vast selection of volunteering opportunities across different causes
+                        and locations, offering flexibility for everyone.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personalized Matches -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 border-0 shadow">
+                <div class="card-body">
+                    <i class="bi bi-person-check-fill display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Personalized Matches</h5>
+                    <p class="card-text">Get matched with projects that suit your skills, interests, and availability,
+                        ensuring a fulfilling volunteer experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Easy Event Management -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 border-0 shadow">
+                <div class="card-body">
+                    <i class="bi bi-calendar-check-fill display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Easy Event Management</h5>
+                    <p class="card-text">Simple tools to manage and coordinate events, track volunteer hours, and keep
+                        everyone updated with ease.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Impact -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 border-0 shadow">
+                <div class="card-body">
+                    <i class="bi bi-people-fill display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Community Impact</h5>
+                    <p class="card-text">Make a positive difference by engaging in meaningful projects that benefit the
+                        community and create lasting change.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Our Services Section -->
+<div class="container py-5">
+    <h3 class="text-center mb-4">Our Services</h3>
+    <div class="row justify-content-center">
+        <!-- Volunteer Opportunity Listings Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/service-1.jpg" class="card-img-top" alt="Volunteer Opportunity Listings">
+                <div class="card-body">
+                    <h5 class="card-title">Volunteer Opportunity Listings</h5>
+                    <p class="card-text">Browse a comprehensive database of volunteer opportunities tailored to your
+                        interests and skills.</p>
+                    <p class="d-inline-flex gap-1">
+                        <button class="btn btn-primary more-details-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOpportunityListings" aria-expanded="false"
+                            aria-controls="collapseOpportunityListings">
+                            More Details
+                        </button>
+                    </p>
+                    <div class="collapse custom-collapse" id="collapseOpportunityListings">
+                        <div class="collapse-content">
+                            Find projects based on location, cause, or skill set. Connect with causes you're passionate
+                            about and organizations in need of your talents.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personalized Volunteer Matching Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/service-2.jpg" class="card-img-top" alt="Personalized Volunteer Matching">
+                <div class="card-body">
+                    <h5 class="card-title">Personalized Volunteer Matching</h5>
+                    <p class="card-text">Get matched with projects that align with your interests, availability, and
+                        expertise.</p>
+                    <p class="d-inline-flex gap-1">
+                        <button class="btn btn-primary more-details-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseVolunteerMatching" aria-expanded="false"
+                            aria-controls="collapseVolunteerMatching">
+                            More Details
+                        </button>
+                    </p>
+                    <div class="collapse custom-collapse" id="collapseVolunteerMatching">
+                        <div class="collapse-content">
+                            Through a detailed profile system, our platform ensures a meaningful, impactful, and
+                            fulfilling volunteering experience by pairing you with the right projects.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Coordination and Management Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/service-3.jpg" class="card-img-top" alt="Event Coordination and Management">
+                <div class="card-body">
+                    <h5 class="card-title">Event Coordination and Management</h5>
+                    <p class="card-text">Organize, promote, and manage volunteer-driven events with ease.</p>
+                    <p class="d-inline-flex gap-1">
+                        <button class="btn btn-primary more-details-btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEventCoordination" aria-expanded="false"
+                            aria-controls="collapseEventCoordination">
+                            More Details
+                        </button>
+                    </p>
+                    <div class="collapse custom-collapse" id="collapseEventCoordination">
+                        <div class="collapse-content">
+                            Tools for nonprofits to manage events, and for volunteers to track hours, receive updates,
+                            and engage in community initiatives seamlessly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chatbot Toggle Button -->
+<button id="toggle-chatbot" class="toggle-chatbot-btn">
+    <i class="bi bi-chat-dots-fill"></i> Chat
+</button>
+
+<!-- Chatbot Interface -->
+<div class="pokedex-container" id="chatbot">
+    <div class="chat-header">
+        <h1 class="chat-title">Voluntario</h1>
+        <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>
+    </div>
+    <div class="chat-container" id="chat-window">
+        <div id="chat-box" class="chat-box">
+            <!-- Messages will be added here dynamically -->
+        </div>
+    </div>
+    <form id="chat-form" aria-label="Chat with Voluntario Bot">
+        <input type="text" id="question" name="question" placeholder="Ask me anything..." required aria-label="Type your message here">
+        <button type="submit" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+    </form>
+</div>
+
+
+    </main>
+
+
+<!-- Footer Section -->
+<footer style="
+    background: linear-gradient(rgba(43, 49, 61, 0.8), rgba(43, 49, 61, 0.8)), 
+                url('../static/Images/footer.jpg') no-repeat center center / cover;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;">
+    <div
+        style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: start;">
+
+        <!-- Get in Touch Section -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Get in Touch</h3>
+            <form action="#" method="post" style="display: flex; flex-direction: column;">
+                <label for="name" style="margin-bottom: 5px;">Name</label>
+                <input type="text" id="name" name="name"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
+
+                <label for="email" style="margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" name="email"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
+
+                <label for="message" style="margin-bottom: 5px;">Message</label>
+                <textarea id="message" name="message" rows="4"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;"></textarea>
+
+                <button type="submit"
+                    style="padding: 10px 20px; background-color: #f7b42c; color: #333; border: none; border-radius: 5px; cursor: pointer;">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <!-- Right Side: Contact Information, About Us, and Social Links -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px; margin-left: 40px;">
+            <!-- Contact Information -->
+            <h3>Contact Information</h3>
+            <p>Email: support@voluntario.com</p>
+            <p>Phone: +123 456 7890</p>
+
+            <!-- About Us -->
+            <h3>About Us</h3>
+            <p>Connecting volunteers with meaningful opportunities to make an impact. Our platform bridges passionate individuals with
+            organizations in need, empowering volunteers to contribute their skills and time toward causes they care about. Join us to 
+            make a difference, one action at a time, and be part of a community dedicated to positive change
+            and lasting impact.</p>
+
+            <!-- Follow Us Links -->
+            <h3>Follow Us</h3>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://facebook.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script>
+            // Function to convert **text** to <strong>text</strong>
+            function formatBoldText(text) {
+                return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+            }
+        
+            document.getElementById("chat-form").onsubmit = async function(event) {
+                event.preventDefault();
+                const question = document.getElementById("question").value;
+                const chatBox = document.getElementById("chat-box");
+        
+                // Display user question in chat
+                const userMessage = document.createElement("div");
+                userMessage.className = "user";
+                userMessage.innerHTML = `<span>${question}</span>`;
+                chatBox.appendChild(userMessage);
+                document.getElementById("question").value = "";  // Clear input
+        
+                // Fetch response from the server
+                try {
+                    const response = await fetch("/ask", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: new URLSearchParams({ question }),
+                    });
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    const data = await response.json();
+        
+                    // Format the response to include bold text
+                    const formattedResponse = formatBoldText(data.response);
+        
+                    // Display chatbot response in chat with formatted bold text
+    
+                    const botMessageWrapper = document.createElement("div");
+                    botMessageWrapper.className = "bot-wrapper";
+    
+                    const botMessage = document.createElement("div");
+                    botMessage.className = "bot";
+                    botMessage.innerHTML = `<span>${formattedResponse}</span>`;
+                    
+                    botMessageWrapper.appendChild(botMessage);
+                    chatBox.appendChild(botMessageWrapper);
+                }   
+            
+                catch (error) {
+                    console.error("Fetch error:", error);
+                    const errorMessage = document.createElement("div");
+                    errorMessage.className = "message bot";
+                    errorMessage.innerHTML = `<span>Sorry, something went wrong. Please try again later.</span>`;
+                    chatBox.appendChild(errorMessage);
+                }
+        
+                chatBox.scrollTop = chatBox.scrollHeight;  // Auto-scroll to latest message
+            };
+        
+            document.getElementById("toggle-chatbot").addEventListener("click", function() {
+    const chatbot = document.getElementById("chatbot");
+    const toggleButton = document.getElementById("toggle-chatbot");
+
+    if (chatbot.style.display === "none" || chatbot.style.display === "") {
+        chatbot.style.display = "flex"; // Show the chatbot
+        toggleButton.style.display = "none"; // Hide toggle button
+    } else {
+        chatbot.style.display = "none"; // Hide the chatbot
+        toggleButton.style.display = "block"; // Show toggle button
+    }
+});
+
+document.getElementById("close-chatbot").addEventListener("click", function() {
+    document.getElementById("chatbot").style.display = "none"; // Hide chatbot
+    document.getElementById("toggle-chatbot").style.display = "block"; // Show toggle button
+});
+
+
+        </script>
+
+</body>
+
+</html>

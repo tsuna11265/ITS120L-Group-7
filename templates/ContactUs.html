@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles.css">
+     <style>
+        /*Header and Footer CSS*/
+.bg-custom-dark {
+    background-color: rgb(43, 49, 61);
+}
+
+.navbar-brand span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn{
+    border-radius: 40px;
+}
+
+footer h6 {
+    color: white;
+    font-size: 16px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer .form-control {
+    border: none;
+}
+
+footer .btn-dark {
+    background-color: #2D3440;
+    color: white;
+}
+/* Google Maps Placeholder */
+.google-maps-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff; /* White background for Google Maps placeholder */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background-color: #f5e5c2; /* Light beige background */
+    border-radius: 8px;
+}
+
+.contact-info .contact-details p {
+    margin: 10px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info .contact-details i {
+    margin-right: 8px;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: #d4a746; /* Gold background for contact form */
+    border-radius: 8px;
+    color: white;
+}
+
+.contact-form-container .form-control {
+    background-color: #fff;
+    border: none;   
+}
+
+.contact-form-container .btn-submit {
+    background-color: #333; /* Dark button color */
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+}
+
+.contact-form-container .btn-submit:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+
+    <header class="bg-custom-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="../static/Images/VoluntarioIcon.png" alt="Handshake Logo" width="90" height="90" class="me-2">
+            </div>
+            <nav class="d-flex gap-4">
+                <a href="/Homepage" class="text-white text-decoration-none">HOME</a>
+                <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
+                <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
+                <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
+            </nav>
+            <div>
+                <a href="/LogIn" class="text-decoration-none"><button class="btn btn-light me-2">Sign In</button></a>
+                <a href="/SignUp" class="text-decoration-none"><button class="btn btn-outline-light">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="flex-grow-1">
+
+        <div class="container py-5">
+            <!-- Google Maps Embed Section -->
+            <div class="mb-5 text-center">
+                <h2 class="mb-4">Find Us Here!</h2>
+                <div class="google-maps-placeholder mb-4 mx-auto"></div> <!-- Placeholder for Google Maps Embed -->
+            </div>
+        
+            <div class="row">
+                <!-- Get In Touch Section -->
+                <div class="col-md-6">
+                    <div class="contact-info p-4">
+                        <h3 class="fw-bold">Get In Touch</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus.</p>
+                        <div class="contact-details">
+                            <p><i class="bi bi-geo-alt"></i> Address placeholder</p>
+                            <p><i class="bi bi-telephone"></i> Phone number placeholder</p>
+                            <p><i class="bi bi-envelope"></i> Email placeholder</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Contact Us Form -->
+                <div class="col-md-6">
+                    <div class="contact-form-container p-4 rounded shadow">
+                        <h3 class="text-center mb-3">Contact Us</h3>
+                        <p class="text-center">Let us help you</p>
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="col">
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Chatbot Toggle Button -->
+<button id="toggle-chatbot" class="toggle-chatbot-btn">
+    <i class="bi bi-chat-dots-fill"></i> Chat
+</button>
+
+<!-- Chatbot Interface -->
+<div class="pokedex-container" id="chatbot">
+    <div class="chat-header">
+        <h1 class="chat-title">Voluntario</h1>
+        <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>
+    </div>
+    <div class="chat-container" id="chat-window">
+        <div id="chat-box" class="chat-box">
+            <!-- Messages will be added here dynamically -->
+        </div>
+    </div>
+    <form id="chat-form" aria-label="Chat with Voluntario Bot">
+        <input type="text" id="question" name="question" placeholder="Ask me anything..." required aria-label="Type your message here">
+        <button type="submit" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+    </form>
+</div>
+
+    </main>
+
+
+    <footer class="bg-custom-dark text-white py-5 mt-auto">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 d-flex flex-column">
+                    <img src="Images/VoluntarioIcon.png" alt="Handshake Logo" width="120">
+                </div>
+
+
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Programs</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+        
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Our Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Terms & Condition</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">User Privacy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
+                    </ul>
+                </div>
+
+ 
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Subscribe to Our Newsletter</h6>
+                    <form class="d-flex">
+                        <input type="email" class="form-control bg-light" placeholder="Your email" required>
+                        <button class="btn btn-dark ms-2" type="submit">OK</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to convert **text** to <strong>text</strong>
+        function formatBoldText(text) {
+            return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+        }
+    
+        document.getElementById("chat-form").onsubmit = async function(event) {
+            event.preventDefault();
+            const question = document.getElementById("question").value;
+            const chatBox = document.getElementById("chat-box");
+    
+            // Display user question in chat
+            const userMessage = document.createElement("div");
+            userMessage.className = "user";
+            userMessage.innerHTML = `<span>${question}</span>`;
+            chatBox.appendChild(userMessage);
+            document.getElementById("question").value = "";  // Clear input
+    
+            // Fetch response from the server
+            try {
+                const response = await fetch("/ask", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: new URLSearchParams({ question }),
+                });
+                if (!response.ok) throw new Error("Network response was not ok");
+                const data = await response.json();
+    
+                // Format the response to include bold text
+                const formattedResponse = formatBoldText(data.response);
+    
+                // Display chatbot response in chat with formatted bold text
+
+                const botMessageWrapper = document.createElement("div");
+                botMessageWrapper.className = "bot-wrapper";
+
+                const botMessage = document.createElement("div");
+                botMessage.className = "bot";
+                botMessage.innerHTML = `<span>${formattedResponse}</span>`;
+                
+                botMessageWrapper.appendChild(botMessage);
+                chatBox.appendChild(botMessageWrapper);
+            }   
+        
+            catch (error) {
+                console.error("Fetch error:", error);
+                const errorMessage = document.createElement("div");
+                errorMessage.className = "message bot";
+                errorMessage.innerHTML = `<span>Sorry, something went wrong. Please try again later.</span>`;
+                chatBox.appendChild(errorMessage);
+            }
+    
+            chatBox.scrollTop = chatBox.scrollHeight;  // Auto-scroll to latest message
+        };
+    
+        document.getElementById("toggle-chatbot").addEventListener("click", function() {
+const chatbot = document.getElementById("chatbot");
+const toggleButton = document.getElementById("toggle-chatbot");
+
+if (chatbot.style.display === "none" || chatbot.style.display === "") {
+    chatbot.style.display = "flex"; // Show the chatbot
+    toggleButton.style.display = "none"; // Hide toggle button
+} else {
+    chatbot.style.display = "none"; // Hide the chatbot
+    toggleButton.style.display = "block"; // Show toggle button
+}
+});
+
+document.getElementById("close-chatbot").addEventListener("click", function() {
+document.getElementById("chatbot").style.display = "none"; // Hide chatbot
+document.getElementById("toggle-chatbot").style.display = "block"; // Show toggle button
+});
+
+
+    </script>
+
+</body>
+</html>

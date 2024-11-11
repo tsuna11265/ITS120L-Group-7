@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Banner</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/About.css">
+    <script src="../static/scripts.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+<!-- Header Section -->
+<header class="header">
+    <div class="header-container">
+       
+        <div class="logo">
+            <img src="../static/images/VoluntarioIcon.png" alt="Voluntario Logo" />
+            <span>VOLUNTARIO</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="/" class="text-white text-decoration-none">HOME</a>
+                <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
+                <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
+                <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
+        </nav>
+
+        <!-- Sign In and Sign Up Buttons -->
+        <div class="auth-buttons">
+            <a href="/LogIn" class="text-decoration-none"><button class="btn btn-light me-2">Sign In</button></a>
+            <a href="/SignUp" class="text-decoration-none"><button class="btn btn-outline-light">Sign Up</button></a>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<section class="about-us">
+    <div class="about-item">
+        <img src="../static/Images/about-1.jpg" alt="About Us Image 1" class="about-image">
+        <div class="about-text">
+            <h2>About Voluntario</h2>
+            <p>
+                Voluntario is a platform dedicated to connecting passionate volunteers with non-profit organizations,
+                local governments, and public programs. Our goal is to make volunteer opportunities accessible and
+                efficient, providing an easy way for individuals to contribute to meaningful causes.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-item">
+        <div class="about-text">
+            <h2>How It Works</h2>
+            <p>
+                Voluntario simplifies the process of matching volunteers with organizations. Volunteers can browse
+                available opportunities, apply online, and manage their volunteer history, while organizations can post
+                and manage events easily. It’s a seamless experience for both sides to make an impact.
+            </p>
+        </div>
+        <img src="../static/Images/about-2.jpg" alt="About Us Image 2" class="about-image">
+    </div>
+</section>
+
+<!--Mission and Vision-->
+<div class="mission-vision">
+    <div class="mission">
+        <h1>Our Mission</h1>
+        <p>To empower individuals and organizations by creating an accessible, efficient, and engaging platform for volunteer
+        matchmaking, fostering a culture of service and social impact across communities.</p>
+    </div>
+    <div class="vision">
+        <h1>Our Vision</h1>
+        <p>To build a world where every willing volunteer finds meaningful opportunities to make a positive impact, and every
+        organization gains the support needed to drive sustainable change.</p>
+    </div>
+</div>
+        
+   
+<!--Key Features-->
+<div class="key-features">
+    <h1>Key Features of our Platform</h1>
+    <ul>
+        <li>
+            <h3>Seamless Volunteer-Organization Matching</h3>
+            <p>Volunteers can quickly browse and apply for a wide range of events based on skills, interests, and location, while
+            organizations have easy access to managing and tracking applications.</p>
+        </li>
+        <li>
+            <h3>Instant Application System</h3>
+            <p>A user-friendly "Apply" button allows volunteers to instantly submit applications to events, reducing time and effort
+            for both volunteers and organizers in coordinating opportunities.</p>
+        </li>
+        <li>
+            <h3>Dedicated Profiles for Volunteers and Organizations</h3>
+            <p>Volunteers and organizations have unique profiles tailored to their needs. Volunteers can view and manage their applied
+            events, while organizations can create, edit, and monitor their posted events efficiently.</p>
+        </li>
+    </ul>
+</div>
+
+
+<!--Timeline-->
+<div class="timeline-container">
+    <div class="timeline">
+        <h2 class="timeline-title">Our History</h2>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>Concept and Ideation</h3>
+                <p>The idea for Voluntario was born, with a vision to create an accessible and efficient volunteer matchmaking platform
+                connecting people with meaningful opportunities.</p>
+                <span class="timeline-date">January 2023</span>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>Platform Development</h3>
+                <p>The team began developing Voluntario’s core features, including the volunteer and organization dashboards, application
+                system, and event management tools.</p>
+                <span class="timeline-date">April 2023</span>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>Beta Launch</h3>
+                <p>Voluntario launched its beta version, inviting early adopters to test the platform, provide feedback, and help refine
+                the user experience.</p>
+                <span class="timeline-date">October 2023</span>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>Official Launch</h3>
+                <p>After successful beta testing and enhancements, Voluntario officially launched, making volunteer matching easier and
+                more efficient for communities everywhere.</p>
+                <span class="timeline-date">November 2024</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--MEET THE TEAM-->
+<div class="container text-center">
+    <h2 class="team-header">Meet the Team</h2>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="../static/images/team-1.jpg" alt="Executive Director" class="img-fluid rounded-circle">
+            <h4>Dr. Alex Johnson</h4>
+            <p>Executive Director</p>
+            <div class="social-icons">
+                <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="../static/images/team-2.jpg" alt="Program Coordinator" class="img-fluid rounded-circle">
+            <h4>Ms. Sarah Thompson</h4>
+            <p>Program Coordinator</p>
+            <div class="social-icons">
+                <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="../static/images/team-3.jpg" alt="Director of Operations" class="img-fluid rounded-circle">
+            <h4>Mr. Michael Rivera</h4>
+            <p>Director of Operations</p>
+            <div class="social-icons">
+                <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="../static/images/team-4.jpg" alt="Outreach Coordinator" class="img-fluid rounded-circle">
+            <h4>Ms. Patricia Lee</h4>
+            <p>Outreach Coordinator</p>
+            <div class="social-icons">
+                <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="../static/images/team-5.jpg" alt="Logistics Manager" class="img-fluid rounded-circle">
+            <h4>Mr. James Brown</h4>
+            <p>Logistics Manager</p>
+            <div class="social-icons">
+                <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="../static/images/team-6.jpg" alt="Volunteer Engagement Specialist" class="img-fluid rounded-circle">
+            <h4>Mr. Robert Richardson</h4>
+            <p>Volunteer Engagement Specialist</p>
+            <div class="social-icons">
+                <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<button id="toggle-chatbot" class="toggle-chatbot-btn">
+    <i class="bi bi-chat-dots-fill"></i> Chat
+</button>
+
+<!-- Chatbot Interface -->
+<div class="pokedex-container" id="chatbot">
+    <div class="chat-header">
+        <h1 class="chat-title">Voluntario</h1>
+        <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>
+    </div>
+    <div class="chat-container" id="chat-window">
+        <div id="chat-box" class="chat-box">
+            <!-- Messages will be added here dynamically -->
+        </div>
+    </div>
+    <form id="chat-form" aria-label="Chat with Voluntario Bot">
+        <input type="text" id="question" name="question" placeholder="Ask me anything..." required aria-label="Type your message here">
+        <button type="submit" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+    </form>
+</div>
+
+<!-- Footer Section -->
+<footer style="
+    background: linear-gradient(rgba(43, 49, 61, 0.8), rgba(43, 49, 61, 0.8)), 
+                url('../static/Images/footer.jpg') no-repeat center center / cover;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;">
+    <div
+        style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: start;">
+
+        <!-- Get in Touch Section -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Get in Touch</h3>
+            <form action="#" method="post" style="display: flex; flex-direction: column;">
+                <label for="name" style="margin-bottom: 5px;">Name</label>
+                <input type="text" id="name" name="name"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
+
+                <label for="email" style="margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" name="email"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
+
+                <label for="message" style="margin-bottom: 5px;">Message</label>
+                <textarea id="message" name="message" rows="4"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;"></textarea>
+
+                <button type="submit"
+                    style="padding: 10px 20px; background-color: #f7b42c; color: #333; border: none; border-radius: 5px; cursor: pointer;">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <!-- Right Side: Contact Information, About Us, and Social Links -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px; margin-left: 40px;">
+            <!-- Contact Information -->
+            <h3>Contact Information</h3>
+            <p>Email: support@voluntario.com</p>
+            <p>Phone: +123 456 7890</p>
+
+            <!-- About Us -->
+            <h3>About Us</h3>
+            <p>Connecting volunteers with meaningful opportunities to make an impact. Our platform bridges passionate
+                individuals with
+                organizations in need, empowering volunteers to contribute their skills and time toward causes they care
+                about. Join us to
+                make a difference, one action at a time, and be part of a community dedicated to positive change
+                and lasting impact.</p>
+
+            <!-- Follow Us Links -->
+            <h3>Follow Us</h3>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://facebook.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to convert **text** to <strong>text</strong>
+        function formatBoldText(text) {
+            return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+        }
+    
+        document.getElementById("chat-form").onsubmit = async function(event) {
+            event.preventDefault();
+            const question = document.getElementById("question").value;
+            const chatBox = document.getElementById("chat-box");
+    
+            // Display user question in chat
+            const userMessage = document.createElement("div");
+            userMessage.className = "user";
+            userMessage.innerHTML = `<span>${question}</span>`;
+            chatBox.appendChild(userMessage);
+            document.getElementById("question").value = "";  // Clear input
+    
+            // Fetch response from the server
+            try {
+                const response = await fetch("/ask", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: new URLSearchParams({ question }),
+                });
+                if (!response.ok) throw new Error("Network response was not ok");
+                const data = await response.json();
+    
+                // Format the response to include bold text
+                const formattedResponse = formatBoldText(data.response);
+    
+                // Display chatbot response in chat with formatted bold text
+
+                const botMessageWrapper = document.createElement("div");
+                botMessageWrapper.className = "bot-wrapper";
+
+                const botMessage = document.createElement("div");
+                botMessage.className = "bot";
+                botMessage.innerHTML = `<span>${formattedResponse}</span>`;
+                
+                botMessageWrapper.appendChild(botMessage);
+                chatBox.appendChild(botMessageWrapper);
+            }   
+        
+            catch (error) {
+                console.error("Fetch error:", error);
+                const errorMessage = document.createElement("div");
+                errorMessage.className = "message bot";
+                errorMessage.innerHTML = `<span>Sorry, something went wrong. Please try again later.</span>`;
+                chatBox.appendChild(errorMessage);
+            }
+    
+            chatBox.scrollTop = chatBox.scrollHeight;  // Auto-scroll to latest message
+        };
+    
+        document.getElementById("toggle-chatbot").addEventListener("click", function() {
+const chatbot = document.getElementById("chatbot");
+const toggleButton = document.getElementById("toggle-chatbot");
+
+if (chatbot.style.display === "none" || chatbot.style.display === "") {
+    chatbot.style.display = "flex"; // Show the chatbot
+    toggleButton.style.display = "none"; // Hide toggle button
+} else {
+    chatbot.style.display = "none"; // Hide the chatbot
+    toggleButton.style.display = "block"; // Show toggle button
+}
+});
+
+document.getElementById("close-chatbot").addEventListener("click", function() {
+document.getElementById("chatbot").style.display = "none"; // Hide chatbot
+document.getElementById("toggle-chatbot").style.display = "block"; // Show toggle button
+});
+
+
+    </script>
+
+</body>
+</html>

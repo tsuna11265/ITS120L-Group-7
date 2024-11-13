@@ -21,7 +21,7 @@
     <script src="../static/scripts.js"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" style="background-color: #fffaf2;">
 
 
 <!-- Header Section -->
@@ -34,12 +34,12 @@
         </div>
 
         <!-- Navigation Links -->
-        <nav class="nav-links">
-            <a href="/" class="text-white text-decoration-none">HOME</a>
+            <nav class="d-flex gap-4">
+                <a href="/" class="text-white text-decoration-none">HOME</a>
                 <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
                 <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
                 <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
-        </nav>
+            </nav>
 
         <!-- Sign In and Sign Up Buttons -->
         <div class="auth-buttons">
@@ -230,7 +230,7 @@
 </button>
 
 <!-- Chatbot Interface -->
-<div class="pokedex-container" id="chatbot">
+<div class="container" id="chatbot">
     <div class="chat-header">
         <h1 class="chat-title">Voluntario</h1>
         <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>

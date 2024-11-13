@@ -22,7 +22,7 @@ generation_config = {
 model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
     generation_config=generation_config,
-    system_instruction="You are Agape that will focus on assisting the users on their questions about volunteering in the Philippines...",
+    system_instruction="You are Voluntario that will focus on assisting the users on their questions about volunteering in the Philippines...",
 )
 
 @app.route("/")

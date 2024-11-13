@@ -1,83 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Event Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
 
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    <header class="bg-custom-dark text-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-                <img src="Images/VoluntarioIcon.png" alt="Handshake Logo" width="90" height="90" class="me-2">
-            </div>
-            <nav class="d-flex gap-4">
-                <a href="#" class="text-white text-decoration-none">HOME</a>
-                <a href="#" class="text-white text-decoration-none">ABOUT</a>
-                <a href="#" class="text-white text-decoration-none">PROGRAMS</a>
-                <a href="#" class="text-white text-decoration-none">CONTACTS</a>
-            </nav>
-            <div>
-                <button class="btn btn-light me-2">Sign in</button>
-                <button class="btn btn-outline-light">Sign up</button>
-            </div>
+    body,
+    html {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        overflow-x: hidden;
+        /* Prevent horizontal scroll */
+        background-color: #f6e7c1;
+    }
+
+    /* Header styling */
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #3a3a3a;
+        color: #f8f5e1;
+        padding: 15px 20px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
+    .header .logo img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .header .description {
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    .header .logout-btn {
+        font-size: 18px;
+        color: #f8f5e1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .logout-btn i {
+        margin-left: 5px;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+        background-color: #f8f5e1;
+        height: 100vh;
+        padding-top: 20px;
+        margin-top: 1%;
+        position: fixed;
+        top: 60px;
+        /* Adjusted for header height */
+        left: 0;
+        width: 200px;
+    }
+
+    .menu {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+    .menu-item {
+        font-size: 16px;
+        font-weight: bold;
+        color: #3a3a3a;
+        margin-bottom: 15px;
+        cursor: pointer;
+        padding: 10px;
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    .menu-item.active {
+        border-left: 4px solid #3a3a3a;
+        color: #3a3a3a;
+        background-color: #e8e4d4;
+        padding-left: 16px;
+    }
+
+    .menu-item:hover {
+        color: #000;
+        background-color: #e8e4d4;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 10px 0;
+    }
+
+    /* Main content styling */
+    .main-content {
+        margin-left: 200px;
+        /* Align with sidebar width */
+        padding: 20px;
+        background-color: #f6e7c1;
+        min-height: 100vh;
+        /* Cover full height of viewport */
+        margin-top: 80px;
+        /* Adjusted for header height */
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../../static/Images/VoluntarioIcon.png" alt="Logo"> Voluntario
+        </div>
+        <div class="description">Volunteer Matchmaking Platform</div>
+        <div class="logout-btn">
+            Logout <i class="bi bi-box-arrow-right"></i>
         </div>
     </header>
 
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+<aside class="sidebar col-md-2">
+    <ul class="menu">
+        <li class="menu-item active"><a href="Dashboard.html" style="color: black; text-decoration: none;">DASHBOARD</a>
+        </li>
+        <hr>
+        <li class="menu-item"><a href="CreateEvent.html" style="color: black; text-decoration: none;">EVENTS</a></li>
+        <hr>
+        <li class="menu-item"><a href="Volunteers.html" style="color: black; text-decoration: none;">VOLUNTEERS</a></li>
+        <hr>
+        <li class="menu-item"><a href="Profile.html" style="color: black; text-decoration: none;">PROFILE</a></li>
+    </ul>
+</aside>
 
-    <main class="flex-grow-1">
 
-        <div class="container py-5">
-            
+
+            <!-- Main content area -->
+            <main class="main-content col-md-10">
+                <!-- Header with Create Event Button -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Events</h2>
+                    <!-- Create Event Button -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasCreateEvent" aria-controls="offcanvasCreateEvent">
+                        Create Event
+                    </button>
+                </div>
+
+                <!-- Events Table -->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Event Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Community Clean-up</td>
+                            <td>April 12, 2023</td>
+                            <td>Central Park</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">Update</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Food Drive</td>
+                            <td>May 5, 2023</td>
+                            <td>Downtown Shelter</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">Update</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Offcanvas Create Event Form -->
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasCreateEvent" aria-labelledby="offcanvasCreateEventLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasCreateEventLabel">Create New Event</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <!-- Create Event Form -->
+                        <form>
+                            <div class="mb-3">
+                                <label for="eventName" class="form-label">Event Name</label>
+                                <input type="text" class="form-control" id="eventName" placeholder="Enter event name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventDate" class="form-label">Event Date</label>
+                                <input type="date" class="form-control" id="eventDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="eventLocation" placeholder="Enter location">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Event</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
         </div>
-    </main>
+    </div>
 
-
-    <footer class="bg-custom-dark text-white py-5 mt-auto">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-3 d-flex flex-column">
-                    <img src="Images/VoluntarioIcon.png" alt="Handshake Logo" width="120">
-                </div>
-
-
-                <div class="col-md-3">
-                    <h6 class="fw-bold">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Programs</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
-                    </ul>
-                </div>
-
-        
-                <div class="col-md-3">
-                    <h6 class="fw-bold">Our Company</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Terms & Condition</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">User Privacy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
-                    </ul>
-                </div>
-
- 
-                <div class="col-md-3">
-                    <h6 class="fw-bold">Subscribe to Our Newsletter</h6>
-                    <form class="d-flex">
-                        <input type="email" class="form-control bg-light" placeholder="Your email" required>
-                        <button class="btn btn-dark ms-2" type="submit">OK</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

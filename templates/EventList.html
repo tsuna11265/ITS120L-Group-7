@@ -25,12 +25,12 @@
         </div>
 
         <!-- Navigation Links -->
-        <nav class="nav-links">
-            <a href="/" class="text-white text-decoration-none">HOME</a>
+            <nav class="d-flex gap-4">
+                <a href="/" class="text-white text-decoration-none">HOME</a>
                 <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
                 <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
                 <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
-        </nav>
+            </nav>
 
         <!-- Sign In and Sign Up Buttons -->
         <div class="auth-buttons">
@@ -40,7 +40,7 @@
     </div>
 </header>
 
-<body>
+<body style="background-color: #fffaf2;">
 <div class="container my-4">
     <h1 class="text-center">Explore Our Events & Programs</h1>
     <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search for an event...">
@@ -57,8 +57,7 @@
                     <p class="card-text">Help save lives by donating blood.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#bloodDonationModal">View Details</button>
-                        <button type="button" class="btn btn-success mt-2">Apply</button>
-                </div>
+                                    </div>
             </div>
         </div>
         <div class="col-md-4 mb-4 card-item" data-category="Health">
@@ -69,7 +68,6 @@
                     <p class="card-text">Get vaccinated and stay protected against illnesses.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#vaccinationClinicModal">View Details</button>
-                        <button type="button" class="btn btn-success mt-2">Apply</button>
                 </div>
             </div>
         </div>
@@ -84,7 +82,6 @@
                     <p class="card-text">Find a loving home for rescued animals.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#petAdoptionModal">View Details</button>
-                        <button type="button" class="btn btn-success mt-2">Apply</button>
                 </div>
             </div>
         </div>
@@ -99,7 +96,6 @@
                     <p class="card-text">Join us to fight climate change.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#treePlantingModal">View Details</button>
-                        <button type="button" class="btn btn-success mt-2">Apply</button>
                 </div>
             </div>
         </div>
@@ -111,7 +107,6 @@
                     <p class="card-text">Help clean up our local parks and public spaces.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#cleanupDriveModal">View Details</button>
-                        <button type="button" class="btn btn-success mt-2">Apply</button>
                 </div>
             </div>
         </div>
@@ -126,7 +121,6 @@
                     <p class="card-text">Provide meals to those in need in our community.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#feedingProgramModal">View Details</button>
-                        <button type="button" class="btn btn-success mt-2">Apply</button>
                 </div>
             </div>
         </div>
@@ -138,7 +132,6 @@
                     <p class="card-text">Support and companionship for the elderly in our community.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#elderCareModal">View Details</button>
-                        <button type="button" class="btn btn-success mt-2">Apply</button>
                 </div>
             </div>
         </div>
@@ -165,22 +158,28 @@
                                     <img src="../static/images/blood-donation.jpg" alt="Event Image" class="img-fluid rounded mb-4">
                                     <div class="event-description">
                                         <h4>About this Event</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                        <p>Join the HealthFirst Foundation for our annual Blood Donation Drive to make a difference in the lives of patients in need. Blood donations are crucial for surgeries, trauma care, and cancer treatments, and your contribution can save lives. The drive will take place in a comfortable, professional setting where medical staff will be available to ensure a safe and smooth donation experience. Every donor will receive a complimentary health screening, light refreshments, and a small token of appreciation. Come and be part of this life-saving initiative!
+                                        </br>
+                                            Event Highlights:
+                                        </br>
+                                            Free health screening for all donors</br>
+                                            Refreshments and snacks provided post-donation</br>
+                                            Certificate of appreciation for all participants</p>
                                     </div>
                                 </div>
                         
                                 <!-- Event Details Section -->
                                 <div class="col-md-4">
                                     <div class="event-details p-4 rounded shadow">
-                                        <p><strong>Virtual</strong></p>
-                                        <p><strong>Date:</strong> Nov 12, 2024</p>
-                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
-                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Event Type:</strong> On-site </p>
+                                        <p><strong>Date:</strong> November 20, 2024</p>
+                                        <p><strong>Time:</strong> 09:00 AM - 01:00 PM</p>
+                                        <p><strong>Organizer:</strong> HealthFirst Foundation</p>
                                         <p><strong>Contact:</strong></p>
                                         <ul class="list-unstyled">
-                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
-                                            <li><i class="bi bi-telephone"></i> Phone Number: </li>
-                                            <li><i class="bi bi-envelope"></i> Email Address: </li>
+                                            <li><i class="bi bi-geo-alt"></i> Location: 123 Health Avenue, Room 203, Wellness Center, City Hospital, Metro City</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: +1 (555) 123-4567</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address: contact@healthfirstfoundation.org</li>
                                         </ul>
                         
                                         <!-- Volunteer Button -->
@@ -216,22 +215,22 @@
                                     <img src="../static/images/pet-adoption.jpg" alt="Event Image" class="img-fluid rounded mb-4">
                                     <div class="event-description">
                                         <h4>About this Event</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                        <p>Paws & Claws Rescue Center invites all animal lovers to our Pet Adoption Program! This event is a perfect opportunity to give a loving home to a rescue animal. Our team will be available to answer questions, provide information on pet care, and guide you through the adoption process. All pets are vaccinated, microchipped, and health-checked. Whether you’re looking for a playful puppy, a gentle cat, or a senior pet needing a second chance, you’ll find them here. Come meet our adorable animals and make a lifelong friend!</p>
                                     </div>
                                 </div>
                         
                                 <!-- Event Details Section -->
                                 <div class="col-md-4">
                                     <div class="event-details p-4 rounded shadow">
-                                        <p><strong>Virtual</strong></p>
-                                        <p><strong>Date:</strong> Nov 12, 2024</p>
-                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
-                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Event Type: </strong>On-site</p>
+                                        <p><strong>Date:</strong> November 18, 2024</p>
+                                        <p><strong>Time:</strong> 10:00 AM - 04:00 PM</p>
+                                        <p><strong>Organizer:</strong> Paws & Claws Rescue Center</p>
                                         <p><strong>Contact:</strong></p>
                                         <ul class="list-unstyled">
-                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
-                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
-                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                            <li><i class="bi bi-geo-alt"></i> Location: 789 Pet Haven Street, Animal Shelter Facility, Building A, Metro City</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: +1 (555) 321-9876</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address:  adopt@pawsandclaws.org</li>
                                         </ul>
                         
                                         <!-- Volunteer Button -->
@@ -267,22 +266,22 @@
                                     <img src="../static/images/tree-planting.jpg" alt="Event Image" class="img-fluid rounded mb-4">
                                     <div class="event-description">
                                         <h4>About this Event</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                        <p>Join the Green Earth Foundation in our annual Tree Planting Initiative and be part of the movement to restore nature and combat climate change. Volunteers will work together to plant native trees in Pine Valley, contributing to reforestation efforts and creating habitats for local wildlife. This family-friendly event is a fantastic way to connect with nature and make a positive environmental impact. We’ll provide all the necessary tools, guidance, and refreshments. Remember to bring a hat, sunblock, and plenty of enthusiasm!</p>
                                     </div>
                                 </div>
                         
                                 <!-- Event Details Section -->
                                 <div class="col-md-4">
                                     <div class="event-details p-4 rounded shadow">
-                                        <p><strong>Virtual</strong></p>
-                                        <p><strong>Date:</strong> Nov 12, 2024</p>
-                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
-                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Event Type: </strong>On-site</p>
+                                        <p><strong>Date:</strong> November 22, 2024</p>
+                                        <p><strong>Time:</strong> 08:00 AM - 02:00 PM</p>
+                                        <p><strong>Organizer:</strong> Green Earth Foundation</p>
                                         <p><strong>Contact:</strong></p>
                                         <ul class="list-unstyled">
-                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
-                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
-                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                            <li><i class="bi bi-geo-alt"></i> Location: Pine Valley Nature Reserve, Trail Entrance, Greenhill Road, Metro City</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: +1 (555) 456-7890</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address: events@greenearthfoundation.org</li>
                                         </ul>
                         
                                         <!-- Volunteer Button -->
@@ -318,22 +317,22 @@
                                     <img src="../static/images/clean-up.jpg" alt="Event Image" class="img-fluid rounded mb-4">
                                     <div class="event-description">
                                         <h4>About this Event</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                        <p>Join the Clean Earth Initiative for a Community Clean-Up Drive at Riverside Park! This event brings together environmentally conscious individuals who want to make a difference by cleaning up litter and waste around the riverside area. All necessary supplies, including gloves, trash bags, and refreshments, will be provided. This is a fantastic opportunity to contribute to a cleaner environment, meet like-minded people, and enjoy a beautiful day outdoors. Let’s work together to keep our community green and clean!</p>
                                     </div>
                                 </div>
                         
                                 <!-- Event Details Section -->
                                 <div class="col-md-4">
                                     <div class="event-details p-4 rounded shadow">
-                                        <p><strong>Virtual</strong></p>
-                                        <p><strong>Date:</strong> Nov 12, 2024</p>
-                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
-                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Event Type: </strong>On-site</p>
+                                        <p><strong>Date:</strong> November 25, 2024</p>
+                                        <p><strong>Time:</strong> 07:00 AM - 12:00 PM</p>
+                                        <p><strong>Organizer:</strong> Clean Earth Initiative</p>
                                         <p><strong>Contact:</strong></p>
                                         <ul class="list-unstyled">
-                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
-                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
-                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                            <li><i class="bi bi-geo-alt"></i> Location: Riverside Park, 101 Greenway Lane, Metro City</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: +1 (555) 654-3210</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address: contact@cleanearthinitiative.org</li>
                                         </ul>
                         
                                         <!-- Volunteer Button -->
@@ -369,22 +368,22 @@
                                     <img src="../static/images/feeding-program.jpg" alt="Event Image" class="img-fluid rounded mb-4">
                                     <div class="event-description">
                                         <h4>About this Event</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                        <p>The Hearts for Hope Foundation is hosting a Feeding Program dedicated to providing nutritious meals to underprivileged children in our community. Volunteers are welcome to join in distributing food, playing games, and sharing moments of joy with the children. This event aims to foster a spirit of community support, care, and compassion. All meals are prepared with the help of generous sponsors, ensuring that every child receives a wholesome and balanced meal. Come be a part of this heartwarming initiative and help make a positive impact in these children's lives.</p>
                                     </div>
                                 </div>
                         
                                 <!-- Event Details Section -->
                                 <div class="col-md-4">
                                     <div class="event-details p-4 rounded shadow">
-                                        <p><strong>Virtual</strong></p>
-                                        <p><strong>Date:</strong> Nov 12, 2024</p>
-                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
-                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Event Type: </strong>On-site</p>
+                                        <p><strong>Date:</strong> November 30, 2024</p>
+                                        <p><strong>Time:</strong> 09:00 AM - 02:00 PM</p>
+                                        <p><strong>Organizer:</strong> Hearts for Hope Foundation</p>
                                         <p><strong>Contact:</strong></p>
                                         <ul class="list-unstyled">
-                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
-                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
-                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                            <li><i class="bi bi-geo-alt"></i> Location: Community Hall, 567 Compassion Street, Metro Cit</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: +1 (555) 789-1234</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address: support@heartsforhope.org</li>
                                         </ul>
                         
                                         <!-- Volunteer Button -->
@@ -403,7 +402,7 @@
 
     <!-- Elder Care Support Modal -->
     <div class="modal fade" id="elderCareModal" tabindex="-1" aria-labelledby="elderCareModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-wide ">
             <div class="modal-content modal-wide">
                 <div class="modal-header">
                     <h5 class="modal-title" id="elderCareModalLabel">Elder Care Support</h5>
@@ -419,22 +418,29 @@
                                     <img src="../static/images/elder-care.jpg" alt="Event Image" class="img-fluid rounded mb-4">
                                     <div class="event-description">
                                         <h4>About this Event</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
+                                        <p>The Compassionate Hearts Organization invites volunteers to join our Elder Care Support initiative at the Sunshine Senior Center. This program is dedicated to bringing companionship and support to our senior residents through meaningful interactions. Volunteers will assist with reading, conversations, and light activities, creating a warm and friendly environment for the elderly. This is a wonderful opportunity to give back to the community, connect with seniors, and bring joy to their day. Join us in making a positive impact on the lives of those who have contributed so much to society.
+
+
+
+
+
+
+                                        </p>
                                     </div>
                                 </div>
                         
                                 <!-- Event Details Section -->
                                 <div class="col-md-4">
                                     <div class="event-details p-4 rounded shadow">
-                                        <p><strong>Virtual</strong></p>
-                                        <p><strong>Date:</strong> Nov 12, 2024</p>
-                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
-                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Event Type:</strong> On-site</p>
+                                        <p><strong>Date:</strong> December 5, 2024</p>
+                                        <p><strong>Time:</strong> 10:00 AM - 04:00 PM</p>
+                                        <p><strong>Organizer:</strong> Compassionate Hearts Organization</p>
                                         <p><strong>Contact:</strong></p>
                                         <ul class="list-unstyled">
-                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
-                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
-                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                            <li><i class="bi bi-geo-alt"></i> Location: Sunshine Senior Center, 234 Harmony Lane, Metro City</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: +1 (555) 234-5678</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address: volunteer@compassionatehearts.org</li>
                                         </ul>
                         
                                         <!-- Volunteer Button -->
@@ -470,22 +476,21 @@
                                     <img src="../static/images/vaccination.jpg" alt="Event Image" class="img-fluid rounded mb-4">
                                     <div class="event-description">
                                         <h4>About this Event</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus. Suspendisse congue nulla felis, at condimentum magna finibus et.</p>
-                                    </div>
+                                        <p>SafeHealth Alliance invites you to join our Vaccination Clinic aimed at promoting community health and disease prevention. Our clinic offers a range of essential vaccines, administered by trained healthcare professionals in a safe and supportive environment. Participants will receive information on vaccine benefits, side effects, and aftercare. This event is designed for all age groups, with specific time slots for children, adults, and seniors. Come protect yourself and your loved ones by staying up-to-date with necessary vaccinations.</p>                                    </div>
                                 </div>
                         
                                 <!-- Event Details Section -->
                                 <div class="col-md-4">
                                     <div class="event-details p-4 rounded shadow">
-                                        <p><strong>Virtual</strong></p>
-                                        <p><strong>Date:</strong> Nov 12, 2024</p>
-                                        <p><strong>Time:</strong> 08:00 AM - 08:00 AM</p>
-                                        <p><strong>Organizer:</strong> Fight4Freedom</p>
+                                        <p><strong>Event Type:</strong> On-site</p>
+                                        <p><strong>Date:</strong> November 15, 2024</p>
+                                        <p><strong>Time:</strong> 10:00 AM - 03:00 PM</p>
+                                        <p><strong>Organizer:</strong> SafeHealth Alliance</p>
                                         <p><strong>Contact:</strong></p>
                                         <ul class="list-unstyled">
-                                            <li><i class="bi bi-geo-alt"></i> Location: Online</li>
-                                            <li><i class="bi bi-telephone"></i> Phone Number</li>
-                                            <li><i class="bi bi-envelope"></i> Email Address</li>
+                                            <li><i class="bi bi-geo-alt"></i> Location: Community Health Center, 456 Wellness Blvd, Room 101, Metro City</li>
+                                            <li><i class="bi bi-telephone"></i> Phone Number: +1 (555) 987-6543</li>
+                                            <li><i class="bi bi-envelope"></i> Email Address: info@safehealthalliance.org</li>
                                         </ul>
                         
                                         <!-- Volunteer Button -->
@@ -511,7 +516,7 @@
 </button>
 
 <!-- Chatbot Interface -->
-<div class="pokedex-container" id="chatbot">
+<div class="container" id="chatbot">
     <div class="chat-header">
         <h1 class="chat-title">Voluntario</h1>
         <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>

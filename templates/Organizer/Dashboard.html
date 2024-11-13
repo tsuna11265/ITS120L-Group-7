@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+</head>
+
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Header styling */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a3a3a;
+    color: #f8f5e1;
+    padding: 15px 20px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    /* Remove fixed positioning */
+  }
+
+  .header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .header .logo img {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .header .description {
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  .header .logout-btn {
+    font-size: 18px;
+    color: #f8f5e1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .logout-btn i {
+    margin-left: 5px;
+  }
+
+  /* Sidebar styling */
+  .sidebar {
+    background-color: #f8f5e1;
+    height: 100vh;
+    padding-top: 20px;
+    margin-top: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    z-index: 1;
+    /* Ensure sidebar stays below header */
+  }
+
+  .menu {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+
+  .menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3a3a3a;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  .menu-item.active {
+    border-left: 4px solid #3a3a3a;
+    color: #3a3a3a;
+    background-color: #e8e4d4;
+    padding-left: 16px;
+  }
+
+  .menu-item:hover {
+    color: #000;
+    background-color: #e8e4d4;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+  }
+
+  /* Main content styling */
+  .main-content {
+    margin-left: 200px;
+    /* Aligns with the width of the sidebar */
+    padding: 20px;
+    padding-top: 70px;
+    /* Add top padding to avoid overlap with header */
+    background-color: #f6e7c1;
+    min-height: 100vh;
+  }
+
+  /* Section styling */
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  /* Card styling */
+  .card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+
+  .card p {
+    margin: 5px 0;
+    color: #444;
+  }
+
+  .card p strong {
+    color: #333;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img src="../../static/Images/VoluntarioIcon.png" alt="Logo"> Voluntario
+      </div>
+      <div class="description">Volunteer Matchmaking Platform</div>
+      <div class="logout-btn">
+        Logout <i class="bi bi-box-arrow-right"></i>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+<aside class="sidebar col-md-2">
+  <ul class="menu">
+    <li class="menu-item active"><a href="Dashboard.html" style="color: black; text-decoration: none;">DASHBOARD</a>
+    </li>
+    <hr>
+    <li class="menu-item"><a href="CreateEvent.html" style="color: black; text-decoration: none;">EVENTS</a></li>
+    <hr>
+    <li class="menu-item"><a href="Volunteers.html" style="color: black; text-decoration: none;">VOLUNTEERS</a></li>
+    <hr>
+    <li class="menu-item"><a href="Profile.html" style="color: black; text-decoration: none;">PROFILE</a></li>
+  </ul>
+</aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+      <!-- Events Section -->
+      <section class="section">
+        <h2>Upcoming Events</h2>
+        <div class="card">
+          <p><strong>Event Name:</strong> Community Clean-up</p>
+          <p><strong>Date:</strong> April 12, 2023</p>
+          <p><strong>Location:</strong> Central Park</p>
+        </div>
+        <div class="card">
+          <p><strong>Event Name:</strong> Food Drive</p>
+          <p><strong>Date:</strong> May 5, 2023</p>
+          <p><strong>Location:</strong> Downtown Shelter</p>
+        </div>
+      </section>
+
+      <!-- Volunteers Section -->
+      <section class="section">
+        <h2>Top Volunteers</h2>
+        <div class="card">
+          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Hours Contributed:</strong> 120 hours</p>
+          <p><strong>Role:</strong> Team Leader</p>
+        </div>
+        <div class="card">
+          <p><strong>Name:</strong> Jane Smith</p>
+          <p><strong>Hours Contributed:</strong> 95 hours</p>
+          <p><strong>Role:</strong> Event Coordinator</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -57,15 +57,17 @@ section {
 
 .nav-links a {
     color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s; /* Add transform transition */
 }
 
 .nav-links a:hover {
     color: #b0b3b8;
+    transform: scale(1.05); /* Slightly enlarges the link */
 }
+
 
 /* Authentication Buttons */
 .auth-buttons {
@@ -234,9 +236,15 @@ section {
     z-index: 3;
 }
 
-.carousel-caption a.btn {
-    z-index: 3;
+.carousel-caption h2 {
+    font-size: 48px; /* Increase font size as needed */
 }
+
+.carousel-caption a.btn {
+    font-size: 18px; /* Increase button font size as needed */
+    padding: 10px 20px; /* Adjust padding for larger button */
+}
+
 
 /* ////////////////////////////////////////////////////////////////////////// */
 /* About Us */
@@ -870,3 +878,35 @@ h5.fw-bold {
     background-color: #5a6268;
 }
 
+.google-maps-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the map iframe fits inside the rounded corners */
+}
+
+
+.more-details-btn {
+    background-color: #2B313D;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.more-details-btn:hover {
+    background-color: #3c4657; /* Slightly lighter color on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+#faqAccordion {
+  margin: 60px; 
+
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel Banner</title>
+    <title>Voluntario - Volunteer Matchmaking Platform</title>
 
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,6 @@
 </head>
 
 
-
 <header class="header">
     <div class="header-container">
        
@@ -32,12 +31,12 @@
         </div>
 
         <!-- Navigation Links -->
-        <nav class="nav-links">
-            <a href="/" class="text-white text-decoration-none">HOME</a>
+            <nav class="d-flex gap-4">
+                <a href="/" class="text-white text-decoration-none">HOME</a>
                 <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
                 <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
                 <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
-        </nav>
+            </nav>
 
         <!-- Sign In and Sign Up Buttons -->
         <div class="auth-buttons">
@@ -62,7 +61,7 @@
                         <h2 class="main-heading">Be the first heart of change</h2>
                         <p class="small-heading">Volunteers don't just give their time, they give a piece of heart</p>
                         <div class="d-grid gap-2 d-md-block">
-                            <a href="GetStarted.html" class="btn btn-primary" type="button">Start Here</a>
+                            <a href="Homepage.html" class="btn btn-primary" type="button">Start Here</a>
                         </div>
                     </div>
                 </div>
@@ -77,8 +76,8 @@
                         <h2 class="main-heading">Volunteer today, volunteer tomorrow</h2>
                         <p class="small-heading">Together, let's create a brighter future.</p>
                         <div class="d-grid gap-2 d-md-block">
-                            <a href="LearnMore.html" class="btn btn-primary" type="button">Learn More</a>
-                            <a href="SignUp.html" class="btn btn-secondary" type="button">Join Us</a>
+                            <a href="AboutUs.html" class="btn btn-primary" type="button">Learn More</a>
+                            <a href="SignUp.html" class="btn btn-secondary" type="button" >Join Us</a>
                         </div>
                     </div>
                 </div>
@@ -93,8 +92,8 @@
                         <h2 class="main-heading">Connecting hearts, Creating impact</h2>
                         <p class="small-heading">Be part of a community where every effort counts.</p>
                         <div class="d-grid gap-2 d-md-block">
-                            <a href="Events.html" class="btn btn-primary" type="button">View Events</a>
-                            <a href="Contact.html" class="btn btn-secondary" type="button">Contact Us</a>
+                            <a href="EventList.html" class="btn btn-primary" type="button">View Events</a>
+                            <a href="ContactUs.html" class="btn btn-secondary" type="button">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +137,7 @@
                         
            
                     </p>
-                    <a href="#" class="read-more">Learn More</a>
+                    <a href="AboutUs.html" class="read-more">Learn More</a>
                 </div>
             </div>
         </section>
@@ -149,22 +148,22 @@
 <section class="gallery container">
     <div class="row">
         <div class="col-md-4 gallery-item">
-            <img src="../static/images/gallery-1.jpg" alt="Gallery Image 1" class="img-fluid">
+            <img src="../static/images/gallery-1.jpg" alt="Gallery Image 1" class="img-fluid" style="margin-top: 40px;">
         </div>
         <div class="col-md-4 gallery-item">
-            <img src="../static/images/gallery-2.jpg" alt="Gallery Image 2" class="img-fluid">
+            <img src="../static/images/gallery-2.jpg" alt="Gallery Image 2" class="img-fluid" style="margin-top: 40px;">
         </div>
         <div class="col-md-4 gallery-item">
-            <img src="../static/images/gallery-3.jpg" alt="Gallery Image 3" class="img-fluid">
+            <img src="../static/images/gallery-3.jpg" alt="Gallery Image 3" class="img-fluid" style="margin-top: 40px;">
         </div>
         <div class="col-md-4 gallery-item">
-            <img src="../static/images/gallery-4.jpg" alt="Gallery Image 1" class="img-fluid">
+            <img src="../static/images/gallery-4.jpg" alt="Gallery Image 1" class="img-fluid" style="margin-top: 40px;">
         </div>
         <div class="col-md-4 gallery-item">
-            <img src="../static/images/gallery-5.jpg" alt="Gallery Image 2" class="img-fluid">
+            <img src="../static/images/gallery-5.jpg" alt="Gallery Image 2" class="img-fluid" style="margin-top: 40px;">
         </div>
         <div class="col-md-4 gallery-item">
-            <img src="../static/images/gallery6.jpg" alt="Gallery Image 3" class="img-fluid">
+            <img src="../static/images/gallery6.jpg" alt="Gallery Image 3" class="img-fluid" style="margin-top: 40px;">
         </div>
     </div>
 </section>
@@ -178,7 +177,7 @@
 
         <!-- Why Choose Us Section -->
 
-<div class="container py-5">
+<div class="container py-5" style="margin-top: -160px;">
     <h3 class="text-center mb-4">Why Choose Us</h3>
     <div class="row text-center">
         <!-- Diverse Opportunities -->
@@ -232,13 +231,13 @@
 </div>
 
 
-            <!-- Our Services Section -->
+<!-- Our Services Section -->
 <div class="container py-5">
     <h3 class="text-center mb-4">Our Services</h3>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center gx-2"> <!-- Added gx-2 for closer gap -->
         <!-- Volunteer Opportunity Listings Card -->
-        <div class="col-md-4 mb-4">
-            <div class="card" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6 mb-4"> <!-- Adjusted column size for better responsiveness -->
+            <div class="card">
                 <img src="../static/images/service-1.jpg" class="card-img-top" alt="Volunteer Opportunity Listings">
                 <div class="card-body">
                     <h5 class="card-title">Volunteer Opportunity Listings</h5>
@@ -247,7 +246,7 @@
                     <p class="d-inline-flex gap-1">
                         <button class="btn btn-primary more-details-btn" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOpportunityListings" aria-expanded="false"
-                            aria-controls="collapseOpportunityListings">
+                            aria-controls="collapseOpportunityListings" style="background-color: #2B313D;">
                             More Details
                         </button>
                     </p>
@@ -262,8 +261,8 @@
         </div>
 
         <!-- Personalized Volunteer Matching Card -->
-        <div class="col-md-4 mb-4">
-            <div class="card" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6 mb-4"> <!-- Adjusted column size for better responsiveness -->
+            <div class="card">
                 <img src="../static/images/service-2.jpg" class="card-img-top" alt="Personalized Volunteer Matching">
                 <div class="card-body">
                     <h5 class="card-title">Personalized Volunteer Matching</h5>
@@ -272,7 +271,7 @@
                     <p class="d-inline-flex gap-1">
                         <button class="btn btn-primary more-details-btn" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseVolunteerMatching" aria-expanded="false"
-                            aria-controls="collapseVolunteerMatching">
+                            aria-controls="collapseVolunteerMatching" style="background-color: #2B313D;">
                             More Details
                         </button>
                     </p>
@@ -287,8 +286,8 @@
         </div>
 
         <!-- Event Coordination and Management Card -->
-        <div class="col-md-4 mb-4">
-            <div class="card" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6 mb-4"> <!-- Adjusted column size for better responsiveness -->
+            <div class="card">
                 <img src="../static/images/service-3.jpg" class="card-img-top" alt="Event Coordination and Management">
                 <div class="card-body">
                     <h5 class="card-title">Event Coordination and Management</h5>
@@ -296,7 +295,7 @@
                     <p class="d-inline-flex gap-1">
                         <button class="btn btn-primary more-details-btn" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseEventCoordination" aria-expanded="false"
-                            aria-controls="collapseEventCoordination">
+                            aria-controls="collapseEventCoordination" style="background-color: #2B313D;">
                             More Details
                         </button>
                     </p>
@@ -311,13 +310,94 @@
         </div>
     </div>
 </div>
+
+<!--FAQ SECTION-->
+<h3 class="text-center mb-4">FAQs</h3>
+<div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne"
+                aria-expanded="true" aria-controls="faqOne"><b>
+                What is Voluntario?</b>
+            </button>
+        </h2>
+        <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                <strong>Voluntario</strong> is a platform designed to connect volunteers with non-profit organizations,
+                local governments, and public institutions. It allows volunteers to find and apply for meaningful events
+                or programs online, while organizations can manage events and receive applications efficiently.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo"
+                aria-expanded="false" aria-controls="faqTwo"><b>
+                How does Voluntario work for volunteers?</b>
+            </button>
+        </h2>
+        <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Volunteers can create an account on Voluntario, browse available events, and apply for ones that match
+                their skills and interests. Volunteers can view their application history in the dashboard, making it
+                easy to track participation.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree"><b>
+                How do organizations post events or programs?</b>
+            </button>
+        </h2>
+        <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                Organizations can register an account and access a dedicated dashboard where they can post new events,
+                manage applications, and update event details. Voluntario simplifies the application process and allows
+                organizations to recruit volunteers with the right skill sets.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour"
+                aria-expanded="false" aria-controls="faqFour"><b>
+                Is there a cost to use Voluntario?</b>
+            </button>
+        </h2>
+        <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                No, Voluntario is completely free to use for both volunteers and organizations. Our platform is designed
+                to promote community engagement and make it easier for people to contribute to meaningful causes without
+                any monetary exchange.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive"
+                aria-expanded="false" aria-controls="faqFive"><b>
+                How do I contact support?</b>
+            </button>
+        </h2>
+        <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                If you need assistance, please reach out to our support team through the "Contact" section on the
+                platform. We are here to help ensure your experience on Voluntario is as smooth as possible.
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Chatbot Toggle Button -->
 <button id="toggle-chatbot" class="toggle-chatbot-btn">
     <i class="bi bi-chat-dots-fill"></i> Chat
 </button>
 
 <!-- Chatbot Interface -->
-<div class="pokedex-container" id="chatbot">
+<div class="container" id="chatbot">
     <div class="chat-header">
         <h1 class="chat-title">Voluntario</h1>
         <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>

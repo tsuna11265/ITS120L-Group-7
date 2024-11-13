@@ -48,49 +48,72 @@ footer .btn-dark {
     border-radius: 8px;
 }
 
-/* Contact Info Section */
-.contact-info {
-    background-color: #f5e5c2; /* Light beige background */
+/* Subscribe Section CSS */
+.subscribe-section {
+    background-color: #f8f9fa; /* Light background */
+    padding: 40px 20px;
+    text-align: center;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px; /* Increased width of the container */
+    margin: auto;
 }
 
-.contact-info .contact-details p {
-    margin: 10px 0;
-    font-size: 14px;
+.subscribe-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subscribe-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.contact-info .contact-details i {
-    margin-right: 8px;
+.subscribe-form input[type="email"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%; /* Increased width of the email input field */
+    max-width: 500px; /* Increased max width for larger screens */
+    transition: border-color 0.3s ease;
 }
 
-/* Contact Form */
-.contact-form-container {
-    background-color: #d4a746; /* Gold background for contact form */
-    border-radius: 8px;
-    color: white;
+.subscribe-form input[type="email"]:focus {
+    border-color: #007bff; /* Highlight color on focus */
+    outline: none;
 }
 
-.contact-form-container .form-control {
-    background-color: #fff;
-    border: none;   
-}
-
-.contact-form-container .btn-submit {
-    background-color: #333; /* Dark button color */
+.subscribe-form button {
+    padding: 12px 20px;
+    font-size: 16px;
     color: #fff;
-    border-radius: 20px;
-    padding: 10px 20px;
+    background-color: #007bff; /* Primary button color */
     border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.contact-form-container .btn-submit:hover {
-    background-color: #555; /* Slightly lighter on hover */
+.subscribe-form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
 }
+
+    
     </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" style="background-color: #fffaf2;">
 
 
     <header class="bg-custom-dark text-white py-3">
@@ -99,15 +122,15 @@ footer .btn-dark {
                 <img src="../static/Images/VoluntarioIcon.png" alt="Handshake Logo" width="90" height="90" class="me-2">
             </div>
             <nav class="d-flex gap-4">
-                <a href="/Homepage" class="text-white text-decoration-none">HOME</a>
+                <a href="/" class="text-white text-decoration-none">HOME</a>
                 <a href="/AboutUs" class="text-white text-decoration-none">ABOUT</a>
                 <a href="/EventList" class="text-white text-decoration-none">PROGRAMS</a>
                 <a href="/ContactUs" class="text-white text-decoration-none">CONTACTS</a>
             </nav>
-            <div>
-                <a href="/LogIn" class="text-decoration-none"><button class="btn btn-light me-2">Sign In</button></a>
-                <a href="/SignUp" class="text-decoration-none"><button class="btn btn-outline-light">Sign Up</button></a>
-            </div>
+        <div class="auth-buttons">
+            <a href="/LogIn" class="text-decoration-none"><button class="btn btn-light me-2">Sign In</button></a>
+            <a href="/SignUp" class="text-decoration-none"><button class="btn btn-outline-light">Sign Up</button></a>
+        </div>
         </div>
     </header>
 
@@ -118,53 +141,41 @@ footer .btn-dark {
             <!-- Google Maps Embed Section -->
             <div class="mb-5 text-center">
                 <h2 class="mb-4">Find Us Here!</h2>
-                <div class="google-maps-placeholder mb-4 mx-auto"></div> <!-- Placeholder for Google Maps Embed -->
-            </div>
-        
-            <div class="row">
-                <!-- Get In Touch Section -->
-                <div class="col-md-6">
-                    <div class="contact-info p-4">
-                        <h3 class="fw-bold">Get In Touch</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mi dolor, viverra vel mauris at, eleifend pellentesque lacus.</p>
-                        <div class="contact-details">
-                            <p><i class="bi bi-geo-alt"></i> Address placeholder</p>
-                            <p><i class="bi bi-telephone"></i> Phone number placeholder</p>
-                            <p><i class="bi bi-envelope"></i> Email placeholder</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Contact Us Form -->
-                <div class="col-md-6">
-                    <div class="contact-form-container p-4 rounded shadow">
-                        <h3 class="text-center mb-3">Contact Us</h3>
-                        <p class="text-center">Let us help you</p>
-                        <form>
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Name" required>
-                                </div>
-                                <div class="col">
-                                    <input type="email" class="form-control" placeholder="Email" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-submit w-100">Submit</button>
-                        </form>
-                    </div>
+                <div class="google-maps-placeholder mb-4 mx-auto">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.571817594423!2d121.01502120000004!3d14.566461400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9080e6f2abd%3A0x1d5b9be15aad02!2sMap%C3%BAa%20University%20Makati!5e0!3m2!1sen!2sph!4v1731386478649!5m2!1sen!2sph" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
-        </div>
+            
+<!--Subscribe to our newsletter-->
+
+<!-- Subscribe Section -->
+<section class="subscribe-section">
+    <div class="container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates right in your inbox. Join our mailing list now!</p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+
          <!-- Chatbot Toggle Button -->
 <button id="toggle-chatbot" class="toggle-chatbot-btn">
     <i class="bi bi-chat-dots-fill"></i> Chat
 </button>
 
 <!-- Chatbot Interface -->
-<div class="pokedex-container" id="chatbot">
+<div class="container" id="chatbot">
     <div class="chat-header">
         <h1 class="chat-title">Voluntario</h1>
         <button id="close-chatbot" class="close-chatbot-btn"><i class="bi bi-x-circle"></i></button>
@@ -183,46 +194,68 @@ footer .btn-dark {
     </main>
 
 
-    <footer class="bg-custom-dark text-white py-5 mt-auto">
-        <div class="container">
-            <div class="row">
+    <footer style="
+    background: linear-gradient(rgba(43, 49, 61, 0.8), rgba(43, 49, 61, 0.8)), 
+                url('../static/Images/footer.jpg') no-repeat center center / cover;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;">
+    <div
+        style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: start;">
 
-                <div class="col-md-3 d-flex flex-column">
-                    <img src="Images/VoluntarioIcon.png" alt="Handshake Logo" width="120">
-                </div>
+        <!-- Get in Touch Section -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Get in Touch</h3>
+            <form action="#" method="post" style="display: flex; flex-direction: column;">
+                <label for="name" style="margin-bottom: 5px;">Name</label>
+                <input type="text" id="name" name="name"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
 
+                <label for="email" style="margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" name="email"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;">
 
-                <div class="col-md-3">
-                    <h6 class="fw-bold">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Programs</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
-                    </ul>
-                </div>
+                <label for="message" style="margin-bottom: 5px;">Message</label>
+                <textarea id="message" name="message" rows="4"
+                    style="padding: 8px; margin-bottom: 10px; border-radius: 5px; border: none;"></textarea>
 
-        
-                <div class="col-md-3">
-                    <h6 class="fw-bold">Our Company</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Terms & Condition</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">User Privacy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
-                    </ul>
-                </div>
+                <button type="submit"
+                    style="padding: 10px 20px; background-color: #f7b42c; color: #333; border: none; border-radius: 5px; cursor: pointer;">
+                    Submit
+                </button>
+            </form>
+        </div>
 
- 
-                <div class="col-md-3">
-                    <h6 class="fw-bold">Subscribe to Our Newsletter</h6>
-                    <form class="d-flex">
-                        <input type="email" class="form-control bg-light" placeholder="Your email" required>
-                        <button class="btn btn-dark ms-2" type="submit">OK</button>
-                    </form>
-                </div>
+        <!-- Right Side: Contact Information, About Us, and Social Links -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px; margin-left: 40px;">
+            <!-- Contact Information -->
+            <h3>Contact Information</h3>
+            <p>Email: support@voluntario.com</p>
+            <p>Phone: +123 456 7890</p>
+
+            <!-- About Us -->
+            <h3>About Us</h3>
+            <p>Connecting volunteers with meaningful opportunities to make an impact. Our platform bridges passionate individuals with
+            organizations in need, empowering volunteers to contribute their skills and time toward causes they care about. Join us to 
+            make a difference, one action at a time, and be part of a community dedicated to positive change
+            and lasting impact.</p>
+
+            <!-- Follow Us Links -->
+            <h3>Follow Us</h3>
+            <div style="display: flex; gap: 10px;">
+                <a href="https://facebook.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" style="color: #f7b42c; font-size: 24px;">
+                    <i class="bi bi-instagram"></i>
+                </a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>

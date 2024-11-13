@@ -18,7 +18,6 @@ Before installing the application, make sure you have the following installed:
 
 1. **Python 3.7+** - You can download it from [python.org](https://www.python.org/downloads/).
 2. **pip** - Python's package installer, included by default with Python installations.
-3. **Git** (optional) - To clone the repository.
 
 ---
 

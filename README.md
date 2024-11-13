@@ -56,11 +56,10 @@ To ask questions, type your query in the input field, and the chatbot will respo
 
 ## Troubleshooting
 -Error: "No module named 'flask'":
-
   -Make sure you’re in the virtual environment and have installed all dependencies. Run pip install -r requirements.txt.
+  
 -Error: "Failed to fetch GEMINI_API_KEY":
-
   -Ensure the .env file is correctly set up in the root directory, and your environment has access to it. Restart the application if needed.
+  
 -API Errors:
-
   -If you encounter errors related to the Gemini API, verify your API key and ensure your network connection is stable.
